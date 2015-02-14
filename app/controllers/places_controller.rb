@@ -16,14 +16,6 @@ class PlacesController < ApplicationController
 	end
 
 
-
-
-
-
-
-
-
-
 	def create
 	end
 
