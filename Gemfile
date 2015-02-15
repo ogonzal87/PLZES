@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'httparty'
 gem 'geocoder'
+gem 'bcrypt-ruby'
 
 
 # Use jquery as the JavaScript library
