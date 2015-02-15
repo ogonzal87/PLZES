@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create, :show]
   resources :places
+  
+  resources :sessions, only: [:create]
+  get '/signin', to: 'sessions#new'
+  get '/signout', to: 'sessions#destroy'
+
 
 end
   # The priority is based upon order of creation: first created -> highest priority.
