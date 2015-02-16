@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-	has_many :places
+  before_save { email.downcase! }
+	
+  has_many :places
 
   validates :name, presence: true, length: { minimum: 3, maximum: 254 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
