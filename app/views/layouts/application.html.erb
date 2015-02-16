@@ -1,14 +1,31 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
-<head>
-  <title>Project2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Plzes</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+	<%= debug(params) if Rails.env.development? %>
 
-<%= yield %>
+	<%= render 'layouts/header' %>
 
-</body>
+	<!-- This is the div for the error messages -->
+	<div class="container-fluid">
+	  <% flash.each do |key, value| %>
+	    <%= content_tag(:div, value, class: "alert alert-#{key} no-margin") %>
+	  <% end %>
+		<%= yield %>
+	</div>
+
+	</body>
 </html>
+
+
+
+  
