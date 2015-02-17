@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
 
 	def index
-		@places = Place.search
+		@places = Place.search(params[:search])
 	end
 
 ##How do I do this?
@@ -24,7 +24,7 @@ class PlacesController < ApplicationController
 	def update
 	end
 
-	def destoy
+	def destroy
 	end
 
 end

@@ -1,3 +1,8 @@
-<p>This will be the seach page where people put where they want to go or are and the next page places#index</p>
+<section>
 
+<%= form_tag places_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
 
+</section>
