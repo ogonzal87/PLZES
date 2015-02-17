@@ -6,15 +6,14 @@ class PlacesController < ApplicationController
 
 ##How do I do this?
 	def show
-		@place = Place.search[7]
+		 @my_places = current_user.places
 	end
 
 #How do i do this one?
 
 	def new 
-		@place = Place.new
+		# @places = Place.search
 	end
-
 
 	def create
 	end

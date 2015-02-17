@@ -3,9 +3,9 @@ class UsersController < ApplicationController
   before_action :correct_user,          only: [:edit, :update, :destroy]
   before_action :redirect_if_signed_in, only: [:new, :create]
 
-	def show
-		@user = User.find(params[:id])
-	end
+	# def show
+	# 	@user = User.find(params[:id])
+	# end
 
 	def new
 		@user = User.new
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to Plzes!!"
-      redirect_to user_path(@user.id)
+      redirect_to new_place_path(current_user)
     else
       render 'new'
   	end

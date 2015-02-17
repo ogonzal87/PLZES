@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
-  get '/contact', to: 'static_pages#contact'
-  get '/about/',  to: 'static_pages#about'
-  get '/signup',  to: 'users#new'
-
-  resources :users, only: [:create, :show]
-  resources :places
   
-  resources :sessions, only: [:create]
-  get '/signin', to: 'sessions#new'
+  get '/home',       to: 'static_pages#home'
+  get '/about/',     to: 'static_pages#about'
+  
+  get '/signup',     to: 'users#new'
+  get '/signin',     to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'
+
+  get '/myplaces',   to: 'places#show'
+
+  resources :users,    only: [:create, :show]
+  resources :places,   only: [:new, :create, :index, :destroy]
+  resources :sessions, only: [:create, :destroy]
 
 end
   # The priority is based upon order of creation: first created -> highest priority.

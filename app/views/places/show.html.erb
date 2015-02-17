@@ -1,5 +1,10 @@
-<%= @place['name'] %>
+This is the page with the list of places for one user
 
-<%= @place['opening_hours']['open_now'] %>
 
-#Am i doin this correctly?
+<% provide(:title, "My Places") %>
+<h1 class="header1">My Places</h1>  <br/>
+
+<h1><% @my_places.each do |place| %></h1>
+  <%= place['name'] %><br/>
+  <%#= link_to 'Delete', places_path(place), method: :delete, data: { confirm: 'Are you sure you want to delete this concert?' } %>
+  <% end %>
