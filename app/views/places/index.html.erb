@@ -4,7 +4,7 @@
 	<% @places.each do |place| %>
 		<li>
 			<%= place['name'] %>
-			<%= link_to "Add to My Places", myplaces_path(place: { name: place['name'] }), 
+			<%= link_to "Add to My Places", myplaces_path(place: { name: place['name'], user_id['user_id'] }), 
         method: :post %>
     </li>
 	<% end %>
