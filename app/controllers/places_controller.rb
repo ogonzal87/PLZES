@@ -1,30 +1,42 @@
 class PlacesController < ApplicationController
+before_action :signed_in_user,  only: [:edit, :update, :destroy]
+before_action :correct_user,    only: [:edit, :update, :destroy]
+# before_action :redirect_if_signed_in, only: [:new, :create]
 
 	def index
 		@places = Place.search(params[:search])
 	end
 
-##How do I do this?
 	def show
 		 @my_places = current_user.places
 	end
 
-#How do i do this one?
-
 	def new 
-		# @places = Place.search
+		@place = Place.new
 	end
 
 	def create
+    @place = Place.new(place_params)
+    if @place.save
+      flash[:success] = "Your place has been added!"
+      redirect_to myplaces_path(current_user)
+    else
+      render 'index'
+  	end
 	end
 
 	def edit
-	end
-
-	def update
+		#redirect_to myplaces_path
 	end
 
 	def destroy
+		#redirect_to myplaces_path
 	end
+
+private
+
+		def place_params
+    	params.require(:place).permit(:name)
+  	end
 
 end

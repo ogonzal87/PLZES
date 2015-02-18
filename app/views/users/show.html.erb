@@ -8,7 +8,7 @@
 <ul>
   <% @user.places.each do |place| %>
     <li>
-      <%= link_to place['name'], place_path(place) %>
+      <%= link_to place['name'], myplaces_path(place) %>
       <% if current_user?(@user) %>
          | <%= link_to "delete", place, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   delete '/signout', to: 'sessions#destroy'
 
   get '/myplaces',   to: 'places#show'
+  get '/myplaces',   to: 'places#edit'
+  delete '/myplaces',to: 'places#destroy'
+  post '/myplaces',  to: 'places#create'
 
   resources :users,    only: [:create, :show]
   resources :places,   only: [:new, :create, :index, :destroy]

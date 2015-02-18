@@ -30,7 +30,7 @@ module SessionsHelper
   end
 
   def redirect_if_signed_in
-    # redirect_to(user_path(current_user)) if signed_in?
+    #redirect_to(user_path(current_user)) if signed_in?
     redirect_to(root_path) if signed_in?
   end
 
@@ -49,8 +49,4 @@ module SessionsHelper
       redirect_to signin_url
     end
   end
-
-  # def admin_user
-  #   redirect_to(user_path(current_user)) unless current_user.admin?
-  # end
 end

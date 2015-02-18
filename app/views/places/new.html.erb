@@ -1,8 +1,6 @@
 <section>
-
-<%= form_tag places_path, :method => 'get' do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
-
+	<%= form_tag places_path, :method => 'get' do %>
+	    <%= text_field_tag :search, params[:search] %>
+	    <%= submit_tag "Where to?" %>
+	<% end %>
 </section>

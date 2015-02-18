@@ -7,3 +7,5 @@ class Place < ActiveRecord::Base
 		api_response['results']
 	end
 end
+
+
