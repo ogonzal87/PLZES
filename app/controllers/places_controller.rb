@@ -1,7 +1,5 @@
 class PlacesController < ApplicationController
-before_action :signed_in_user,  only: [:edit, :update, :destroy]
-before_action :correct_user,    only: [:edit, :update, :destroy]
-# before_action :redirect_if_signed_in, only: [:new, :create]
+before_action :signed_in_user
 
 	def index
 		@places = Place.search(params[:search])
@@ -38,5 +36,4 @@ private
 		def place_params
     	params.require(:place).permit(:name)
   	end
-
 end

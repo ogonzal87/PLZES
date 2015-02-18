@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user,        only: [:edit, :update, :destroy]
-  before_action :correct_user,          only: [:edit, :update, :destroy]
-  #before_action :redirect_if_signed_in, only: [:new, :create]
+  before_action :signed_in_user,        only: [:show, :new, :create]
+  before_action :correct_user,          only: [:new, :create, :show]
+
 
 	def show
 		@user = User.find(params[:id])
@@ -30,7 +30,6 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(user_path(current_user)) unless current_user?(@user)
+      redirect_to signin_path unless current_user?(@user)
     end
-
 end
