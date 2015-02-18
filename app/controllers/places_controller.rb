@@ -13,15 +13,18 @@ before_action :signed_in_user
 		@place = Place.new
 	end
 
-	def create
-    @place = Place.new(place_params)
+  def create
+    #@active = 'places'
+    @place = current_user.places.new(place_params) 
+
     if @place.save
-      flash[:success] = "Your place has been added!"
-      redirect_to myplaces_path(current_user)
+      flash[:success] = "This place has been added to your Favorites!"
+      redirect_to myplaces_path
     else
-      render 'index'
-  	end
-	end
+      render 'new'
+    end
+  end
+
 
 	def edit
 		#redirect_to myplaces_path

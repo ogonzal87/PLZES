@@ -1,19 +1,28 @@
 <% provide(:title, "My Places") %>
 <h1>My Places</h1>
-
-<%= current_user.name %>
 <%= current_user.id %>
 
-
 <div>
-	<% @my_places.each do |place| %>
-		<%= place.name %>
-		<%= user.name %>
+	<ul>
+		<% @my_places.each do |place| %>
+			<li>
+			<%= place.name %>
+			<%= current_user.name %>
+			</li>
 	  <%#= link_to 'Delete', places_path(place), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
-	<% end %>
+		<% end %>
+	</ul>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+<%= current_user.id %>
 
 
 
