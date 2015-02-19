@@ -24,11 +24,13 @@ before_action :signed_in_user
     end
   end
 
-	def destroy
-		#redirect_to myplaces_path
+  def destroy
+  	@my_place = Place.find(params[:id])
+    @my_place.destroy
+    redirect_to my_places_path, flash[:success] = "Place deleted."
 	end
-
-private
+	
+	private
 
 		def place_params
     	params.require(:place).permit(:name)

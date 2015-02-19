@@ -5,9 +5,8 @@
 	<ul>
 		<% @my_places.each do |place| %>
 			<li>
-				<%= place.name %>
+				<%= place.name %><%= link_to 'Delete', places_path(place), method: :delete, data: { confirm: 'Are you sure?' } %>
 			</li>
-	  <%#= link_to 'Delete', places_path(place), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
 		<% end %>
 	</ul>
 </div>
