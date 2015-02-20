@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 		<section>
-			<%= form_tag places_path, :method => 'get' do %>
+			<%= form_tag places_results_path, :method => 'get' do %>
 			    <%= text_field_tag :search, params[:search], class: 'form-control' %>
 			    <%= submit_tag "Where to?", class: "btn btn-primary" %>
 			<% end %>

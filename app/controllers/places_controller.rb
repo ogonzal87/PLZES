@@ -1,13 +1,17 @@
 class PlacesController < ApplicationController
-before_action :signed_in_user
+  before_action :signed_in_user
 
 	def index
-		@places = Place.search(params[:search])
+		@places = Place.all
 	end
 
 	def show
-		 @my_places = current_user.places
+    @place = Place.find(params[:id])
 	end
+
+  def search
+    @places = Place.search(params[:search])
+  end
 
 	def new 
 		@place = Place.new
@@ -18,7 +22,7 @@ before_action :signed_in_user
     @place = current_user.places.new(place_params)
     if @place.save
       flash[:success] = "This place has been added to your Favorites!"
-      redirect_to myplaces_path
+      redirect_to places_path
     else
       render 'new'
     end
@@ -27,7 +31,7 @@ before_action :signed_in_user
   def destroy
   	@my_place = Place.find(params[:id])
     @my_place.destroy
-    redirect_to my_places_path, flash[:success] = "Place deleted."
+    redirect_to places_path, flash[:success] = "Place deleted."
 	end
 	
 	private

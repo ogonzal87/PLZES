@@ -5,14 +5,12 @@ Rails.application.routes.draw do
   get '/home',       to: 'static_pages#home'
   get '/about/',     to: 'static_pages#about'
   
+
   get '/signup',     to: 'users#new'
   get '/signin',     to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'
-
-  get '/myplaces',   to: 'places#show'
-  get '/myplaces',   to: 'places#edit'
-  delete '/myplaces',to: 'places#destroy'
-  post '/myplaces',  to: 'places#create'
+  get '/places/results', to: 'places#search'
+  
 
   resources :users,    only: [:create, :show]
   resources :places,   only: [:new, :create, :index, :destroy]

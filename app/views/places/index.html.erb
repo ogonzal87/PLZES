@@ -1,12 +1,12 @@
-<h2>Top bars in <%= params[:search].titleize %>.</h2>
+<% provide(:title, "My Places") %>
+<h1>My Plzes</h1>
 
-<ul>
-	<% @places.each do |place| %>
-		<li>
-			<%= place['name'] %>
-			<%= link_to "Add to My Places", myplaces_path(place: { name: place['name'] }), method: :post %>
-    </li>
-	<% end %>
-</ul>
-
-
+<div>
+	<ul>
+		<% @places.each do |place| %>
+			<li>
+				<%= place.name %>
+			</li>
+		<% end %>
+	</ul>
+</div>
