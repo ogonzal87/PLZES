@@ -41,6 +41,9 @@ gem 'awesome_print'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'factory_girl_rails', '4.2.0'
+  gem 'faker'
+  gem 'capybara', '2.2.0'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
