@@ -9,7 +9,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
 	end
 
-  def search
+  def results
     @places = Place.search(params[:search])
   end
 

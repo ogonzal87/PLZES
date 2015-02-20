@@ -6,9 +6,4 @@ class StaticPagesController < ApplicationController
 	def about
 		@active = 'about'
 	end
-
-	def contact
-		@active = 'contact'
-	end
-
 end
