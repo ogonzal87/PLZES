@@ -1,18 +1,10 @@
 require 'rails_helper'
 
-
 describe PlacesController, type: :controller do
   let(:user) { FactoryGirl.create(:user) }
   before { sign_in user, no_capybara: true }
   let(:place1) { FactoryGirl.create(:place) }
   let(:place2) { FactoryGirl.create(:place) }
-
-# describe PlacesController, type: :controller do
-# 	let(:user) { FactoryGirl.create(:user) }
-# 	sign_in { user, no_capybara: true }
-
-#   let(:place1) { Place.create(name: 'Chipotle') }
-#   let(:place2) { Place.create(name: 'Burrito Palace') }
 
   describe 'GET #index' do
     it 'renders index' do # loads the page

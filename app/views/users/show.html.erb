@@ -2,16 +2,12 @@
 
 <% provide(:title, @user.name) %>
 
-<h1><%= @user.name %></h1>
+<h1>Hi <%= @user.name %>!</h1>
 
-<h5>Places Added</h5>
-<ul>
-  <% @user.places.each do |place| %>
-    <li>
-      <%= link_to place['name'], places_path(place) %>
-      <% if current_user?(@user) %>
-         | <%= link_to "delete", place, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
-     </li>
-  <% end %>
-</ul>
+<h4>Manage your Account</h4>
+
+
+
+
+
+
