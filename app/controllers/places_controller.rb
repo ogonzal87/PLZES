@@ -10,7 +10,7 @@ class PlacesController < ApplicationController
 	end
 
   def results
-    @places = Place.search(params[:search])
+    @places = Place.search(params[:search], params[:search])
   end
 
 	def new 

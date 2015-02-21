@@ -1,14 +1,47 @@
 <!-- This is the search or "Where to?" page.  -->
+
+<div class="jumbotron search">
+  <div id="search-params">
+    <%= form_tag places_results_path, :method => 'get' do %>
+      <div class="form-text">What?</div>
+      <%= text_field_tag :location, params[:location] %>
+      <div class="form-text">Where?</div>
+      <%= text_field_tag :artist, params[:artist] %>
+      </br>
+      <%= submit_tag "Search", class: "btn-concert btn-primary" %> 
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-		<section>
-			<%= form_tag places_results_path, :method => 'get' do %>
-			    <%= text_field_tag :search, params[:search], class: 'form-control' %>
-			    <%= submit_tag "Where to?", class: "btn btn-primary" %>
-			<% end %>
-		</section>
+		<section> -->
+			<%#= form_tag places_results_path, :method => 'get' do %>
+			    <%#= text_field_tag :search, params[:search], class: 'form-control' %>
+			    <%#= submit_tag "What?", class: "btn btn-primary" %>
+			<%# end %>
+	<!-- 	</section>
 	</div>
-</div>
+</div> -->
 
 
 
