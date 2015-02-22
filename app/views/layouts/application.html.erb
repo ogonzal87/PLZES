@@ -9,9 +9,10 @@
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
+
 	</head>
-	<body>
-	<%= debug(params) if Rails.env.development? %>
+	<body class="img-responsive" alt="Responsive image">
+	<%#= debug(params) if Rails.env.development? %>
 
 	<%= render 'layouts/header' %>
 
