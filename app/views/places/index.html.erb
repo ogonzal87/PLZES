@@ -1,15 +1,23 @@
 <!-- This is the page where people see the places they have favorited.  -->
 
 <% provide(:title, "My Places") %>
-<h1>My Plzes</h1>
+<center><h1>My Plzes</h1></center>
 
-<div>
-	<ul>
+<div class="container-fluid">
+	<div class="container" id="main">
+		<div class="row">
 		<% @places.each do |place| %>
-			<li>
-				<%= place.name %> | 
-      	<%= link_to "delete", place, method: :delete, data: { confirm: 'Are you sure?' } %>
-			</li>
+			<div class="col-md-6 text-left">
+				<div class="panel panel-default">
+	  			<div class="panel-body">
+	  				<p>
+							<span style="float: left"><%= place.name %></span>
+			      	<span style="float: right"><%= link_to "Visited", place, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+		      	</p>
+					</div>
+				</div>
+			</div>
 		<% end %>
-	</ul>
 </div>
+
+
