@@ -8,12 +8,22 @@ Plzes is an app that allows you to search for places you are interested in, save
  - https://moqups.com/ogonzal87/berEgNaG
 
 == USER STORIES
-As a user, I can select places
-As a user, I can login and logout of my account
-As a user, I can sign up for an account with an email address and password
-As a user, I can delete places from my Profile
-As a user, I can check in into a place I have visited 
+* As a user, I can delete places from my Profile
+* As a user, I can check in into a place I have visited
+* As a user, I can see a list of the places saved to my Profile
+* As a user, I can select places
+* As a user, I can login and logout of my account
+* As a user, I can sign up for an account with an email address and password
 
+
+== TECHNOLOGIES USED
+* Rails 4.2.0
+* Ruby 2.2.0
+* HTML5
+* CSS3
+* PostgreSQL
+* Twitter Bootstrap 3.3.2
+* 
 
 
 

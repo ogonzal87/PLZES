@@ -3,6 +3,7 @@ class PlacesController < ApplicationController
 
 	def index
 		@places = Place.all
+    @my_places = current_user.places
 	end
 
 	def show
