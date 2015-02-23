@@ -1,5 +1,36 @@
 == README
 
+Hello there, 
+
+Plzes is an app that allows you to search for places you are interested in, save them to your profile for later viewing and allows you keep track of the places you have visited on a certain city. This first version of the project allows you to seach for the coolest bars in any city in the world. Check it out. Is pretty cool. 
+
+ - https://trello.com/b/eql6xanI/project-2
+ - https://moqups.com/ogonzal87/berEgNaG
+
+== USER STORIES
+As a user, I can select places
+As a user, I can login and logout of my account
+As a user, I can sign up for an account with an email address and password
+As a user, I can delete places from my Profile
+As a user, I can check in into a place I have visited 
+
+
+
+
+
+Overview - Description of project
+Links:
+Heroku page
+Trello Board
+GitHub project
+User Stories
+Technologies Used
+Diagrams (embedded or links):
+ERD
+wireframes (picture or link to moqups, etc)
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
