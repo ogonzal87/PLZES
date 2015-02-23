@@ -2,7 +2,7 @@
 
 Hello there, 
 
-Plzes is an app that allows you to search for places you are interested in, save them to your profile for later viewing and allows you keep track of the places you have visited on a certain city. This first version of the project allows you to seach for the coolest bars in any city in the world. Check it out. Is pretty cool. 
+Plzes is an app that allows you to search for places you are interested in, save them to your profile for later viewing and allows you keep track of the places you have visited on a certain city. This first version of the project allows you to search for the coolest bars in any city in the world. Check it out. Is pretty cool. 
 
  - https://trello.com/b/eql6xanI/project-2
  - https://moqups.com/ogonzal87/berEgNaG
@@ -21,49 +21,11 @@ Plzes is an app that allows you to search for places you are interested in, save
 * Ruby 2.2.0
 * HTML5
 * CSS3
-* PostgreSQL
+* PostgreSQL Database
 * Twitter Bootstrap 3.3.2
-* 
-
-
-
-
-Overview - Description of project
-Links:
-Heroku page
-Trello Board
-GitHub project
-User Stories
-Technologies Used
-Diagrams (embedded or links):
-ERD
-wireframes (picture or link to moqups, etc)
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* API Integration
+* User Authentication & Authorization from scratch using b-crypt-ruby
+* Testing with Rspec
+* Google Places API using HTTParty
+* capybara, faker, actory_girl
+* Heroku deployment
