@@ -4,7 +4,7 @@ Hello there,
 
 Plzes is an app that allows you to search for places you are interested in, save them to your profile for later viewing and allows you keep track of the places you have visited on a certain city. This first version of the project allows you to search for the coolest bars in any city in the world. Check it out. Is pretty cool. 
 
- - https://trello.com/b/eql6xanI/project-2
+ <href='https://trello.com/b/eql6xanI/project-2'>
  - https://moqups.com/ogonzal87/berEgNaG
 
 == USER STORIES
