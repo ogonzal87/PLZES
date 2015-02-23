@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get '/places/results', to: 'places#results'
 
-  resources :users,    only: [:create, :show]
+  resources :users,    only: [:create, :show, :edit, :update]
   resources :places,   only: [:new, :create, :index, :destroy, :show]
   resources :sessions, only: [:create, :destroy]
 

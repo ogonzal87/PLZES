@@ -3,7 +3,7 @@
 	<div class="col-md-4"></div>
 	  <div class="col-md-4 search-bar">
 		<section>
-		<h1>What city are you visiting this time?</h1>
+		<center><h1>What city are you visiting this time?</h1></center>
 			<%= form_tag places_results_path, :method => 'get' do %>
 			    <%= text_field_tag :search, params[:search], class: 'form-control' %><%= submit_tag "Let's see some Plzes", class: "btn btn-primary" %>
 			<% end %>
