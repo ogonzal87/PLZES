@@ -1,7 +1,6 @@
 <!-- This is the Search results page -->
 <br>
-<center><h1>These are the top Bars in <%= params[:search].titleize %>.</h1></center>
-
+<center><h1>These are the top <%= params[:category].titleize %> in <%= params[:location].titleize %>.</h1></center>
 
 <div class="container-fluid">
 	<div class="container" id="main">
@@ -11,11 +10,13 @@
 						<div class="panel panel-default">
 			  			<div class="panel-body">
 			  				<p>
-									<span style="float: left"><%= place['name'] %></span>
-									<span style="float: right"><%= link_to "Add to MyPlzes", places_path(place: { name: place['name'] }), method: :post %></span>
-								</p>
-							</div>
+								<span style="float: left"><%= place['name'] %></span>
+								<span style="float: right"><%= link_to "Add to MyPlzes", places_path(place: { name: place['name'] }), method: :post %></span>
+							</p>
+						</div>
 						</div>
 					</div>
 				<% end %>
+		</div>
+	</div>
 </div>

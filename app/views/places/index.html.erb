@@ -10,15 +10,17 @@
 		<% @my_places.each do |place| %>
 			<div class="col-md-6 text-left">
 				<div class="panel panel-default">
-	  			<div class="panel-body">
-	  				<p>
-							<span style="float: left"><%= place.name %></span>
-			      	<span style="float: right"><%= link_to "Visited", place, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-		      	</p>
+		  			<div class="panel-body">
+		  				<p>
+						<span style="float: left"><%= place.name %></span>
+				      	<span style="float: right"><%= link_to "Visited", place, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+			      		</p>
 					</div>
 				</div>
 			</div>
 		<% end %>
+		</div>
+	</div>
 </div>
 
 

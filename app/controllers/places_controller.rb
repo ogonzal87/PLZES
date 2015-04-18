@@ -3,41 +3,41 @@ class PlacesController < ApplicationController
 
 	def index
 		@places = Place.all
-    @my_places = current_user.places
+            @my_places = current_user.places
 	end
 
-	def show
-    @place = Place.find(params[:id])
+	# def show
+ #          @place = Place.find(params[:id])
+	# end
+
+      def results
+          @places = Place.search(params[:location], params[:category] )
+      end
+
+	def new
+	     @place = Place.new
 	end
 
-  def results
-    @places = Place.search(params[:search])
-  end
+      def create
+          @active = 'places'
+          @place = current_user.places.new(place_params)
+          if @place.save
+            flash[:success] = "This place has been added to your Favorites!"
+            redirect_to places_path
+          else
+            render 'new'
+          end
+      end
 
-	def new 
-		@place = Place.new
-	end
+      def destroy
+          @place = Place.find(params[:id])
+          @place.destroy
+          redirect_to places_path
+      end
 
-  def create
-    @active = 'places'
-    @place = current_user.places.new(place_params)
-    if @place.save
-      flash[:success] = "This place has been added to your Favorites!"
-      redirect_to places_path
-    else
-      render 'new'
-    end
-  end
+private
 
-  def destroy
-  	@place = Place.find(params[:id])
-    @place.destroy
-    redirect_to places_path
-	end
-	
-	private
-
-		def place_params
-    	params.require(:place).permit(:name)
+	def place_params
+    	     params.require(:place).permit(:name)
   	end
 end
