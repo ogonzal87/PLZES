@@ -11,11 +11,11 @@ class PlacesController < ApplicationController
 	end
 
   def results
-    @places = Place.search(params[:search])
+    @places = Place.search(params[:category], params[:location] )
   end
 
-	def new 
-		@place = Place.new
+	def new
+	   @place = Place.new
 	end
 
   def create
@@ -30,14 +30,15 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-  	@place = Place.find(params[:id])
+    @place = Place.find(params[:id])
     @place.destroy
     redirect_to places_path
-	end
-	
-	private
+  end
 
-		def place_params
-    	params.require(:place).permit(:name)
-  	end
+private
+
+	def place_params
+    params.require(:place).permit(:name)
+  end
+
 end
