@@ -8,8 +8,7 @@
 				<% @places.each do |place| %>
 					<div class="col-md-6 text-left">
 						<div class="panel panel-default">
-			  			<div class="panel-body">
-			  				<p>
+a							<p>
 								<span style="float: left"><%= place['name'] %></span>
 								<span style="float: right"><%= link_to "Add to MyPlzes", places_path(place: { name: place['name'] }), method: :post %></span>
 							</p>
