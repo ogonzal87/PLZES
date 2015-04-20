@@ -11,7 +11,7 @@ class PlacesController < ApplicationController
 	end
 
   def results
-    @places = Place.search(params[:category], params[:location] )
+    @places = Place.search(params[:category], params[:location])
   end
 
 	def new

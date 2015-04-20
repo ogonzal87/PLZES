@@ -9,9 +9,27 @@
 				<div class="col-md-6 text-left">
 					<div class="panel panel-default">
 			  		<div class="panel-body">
+			  			<div>
+			  				<%if place['photos'] == false || place['photos'] == nil %>
+	   							<% photo = 'CnRnAAAAVNNL5sbyVWUematFiiP9MmdFoqbhgRyAwGG11YX_XQ1lhgorP30tx_UFAHeA4fJCz9io9J4_-26n2l7I-aGPfZ9KxRuKmvHC5vkeaOS2AsV4_0Kaoq2X5zNaCCW-GpbLnrnEVsHs4AK6h863mcXRihIQEn0bGHnci5h12pkwXkfKKBoUF0pn-HeJbfKFPVGEYDODhJPvAgQ'   %>
+	  						<% else %>
+	    						<% photo = place['photos'][0]['photo_reference'] %>
+	    					<% end %>
+                <!-- Pictures -->
+                 <img src= <%= "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=#{photo}&key=AIzaSyDSNCeNSD64AM7KxZ3kK1kLEQcku_UYzns" %> style="height:100px; width:100px;" />
+              </div>
+
 			  			<p>
 								<span style="float: left"><%= place['name'] %></span>
-								<span style="float: right"><%= link_to "Add to MyPlzes", places_path(place: { name: place['name'] }), method: :post %></span>
+								<span style="float: left"><%= place['rating'] %></span>
+								<span style="float: left"><%= place['formatted_address'] %></span>
+
+								<span style="float: right"><%= link_to "Add to MyPlzes", places_path(place: {
+									name: place['name'],
+									rating: place['rating'],
+									address: place['formatted_address'],
+									photo: photo
+									}), method: :post %></span>
 							</p>
 						</div>
 					</div>
