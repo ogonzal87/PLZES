@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'autoprefixer-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'httparty'
@@ -22,7 +24,7 @@ group :development, :test do
   gem 'capybara', '2.2.0'
   gem 'web-console', '~> 2.0'
   gem 'rspec-rails', '3.1.0'
-  gem 'pry' 
+  gem 'pry'
   gem 'spring'
 end
 

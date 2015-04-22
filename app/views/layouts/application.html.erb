@@ -5,24 +5,31 @@
 	  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <title>Plzes</title>
+	  <title><%= yield(:title) %> | Plzes</title>
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
 
+	  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.2/evil-icons.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.2/evil-icons.min.js"></script>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 
 	</head>
-	<body class="img-responsive" alt="Responsive image">
+	<body>
 	<%#= debug(params) if Rails.env.development? %>
 
 	<%= render 'layouts/header' %>
 
 	<!-- This is the div for the error messages -->
-	<div class="container-fluid">
+	<div class="">
 	  <% flash.each do |key, value| %>
 	    <%= content_tag(:div, value, class: "alert alert-#{key} no-margin") %>
 	  <% end %>
-		<%= yield %>
+
+															<%= yield %>
+
+
 	</div>
 
 	</body>

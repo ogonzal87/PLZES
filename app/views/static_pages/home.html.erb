@@ -1,10 +1,65 @@
-<div class="row">
-  <div class="col-md-4 home"></div>
-  <div class="col-md-4 home">
- 		<center><h1>What bars are out There..?</h1><br>
- 		<%= link_to "Let's Find Out!", signup_path, class: "btn btn-lg btn-success" %></center>
- 		<center>Or simply <%= link_to "Sign in", signin_path, class: "btn" %></center>
- 	</div>
- 	<div class="col-md-4 home"></div>
+<% provide(:home, "active") %>
+<% provide(:title, "Home") %>
+
+
+<div class="home-greeting">
+  <div class="overlay">
+    <center><div class="plane" style="text-align: center">
+      <%= image_tag("paper44.png", :alt => "plane") %>
+    </div></center>
+    <div class="row">
+      <h1 class="home-question">What is out there..?</h1>
+        <%= link_to "Let's Find Out", signup_path, class: "btn btn-lg btn-success" %><br>
+        Or simply <%= link_to "Sign in", signin_path, class: "btn" %>
+    </div>
+  </div>
 </div>
+
+<!--begin bg-carousel-->
+<div id="bg-fade-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+<!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="slide1">
+              <%= image_tag("backgroundd.jpeg", :alt => "picture3") %>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slide2">
+              <%= image_tag("background.jpeg", :alt => "picture1") %>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slide3">
+              <%= image_tag("background1.jpeg", :alt => "picture2") %>
+            </div>
+        </div>
+    </div><!-- .carousel-inner -->
+</div><!-- .carousel -->
+<!--end bg-carousel-->
+
+<div class="container">
+  <div class="row text-center">
+      <div class="col-md-4 explanation">
+        <div class="fa fa-search fa-3x circles"></div>
+        <h2>1) Search places</h2>
+        <p>Plzes will search for the best places in town! Before or while you are traveling, you can build your itinerary easily.</p>
+        <p><a class="btn btn-default" href="/signup" role="button">Get the Scoop »</a></p>
+      </div>
+      <div class="col-md-4 explanation">
+        <div class="fa fa-heart fa-3x circles"></div>
+        <h2>2) Save your Favorites</h2>
+        <p>Once you have found the places you really love you can save them to your account. We will store them until you have checked in!</p>
+        <p><a class="btn btn-default" href="/signup" role="button">How do you do it? »</a></p>
+      </div>
+      <div class="col-md-4 explanation">
+        <div class="fa fa-check-circle-o fa-3x circles"></div>
+        <h2>3) Checkin & add more!</h2>
+        <p>Once you have visited each place, you can add as many as you want and get rid of the ones you visited already!</p>
+        <p><a class="btn btn-default" href="/signup" role="button">Let's get started »</a></p>
+      </div>
+  </div>
+</div>
+
+
 

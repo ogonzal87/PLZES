@@ -1,8 +1,13 @@
+<% provide(:search, "active") %>
+<% provide(:title, 'Search') %>
+
 <!-- This is the search or "Search" page.  -->
+
 <div class="row">
 	<div class="col-md-4"></div>
 		<div class="col-md-4 search-bar">
 		<div>
+		<center><h1>Hi <%= @user.name %>!</h1></center>
 		<center><h1>Let's start with this:</h1></center>
 			<%= form_tag places_results_path, :method => 'get' do %>
 				<%= text_field_tag :location, params[:location], class: 'form-control', placeholder:"Where are you going?", :autofocus=>true %>

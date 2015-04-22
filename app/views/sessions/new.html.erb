@@ -1,23 +1,26 @@
+<% provide(:sign_in, "active") %>
 <% provide(:title, 'Sign In') %>
 
-<div class="row">
-	<div class="col-md-4"></div>
-	  <div class="col-md-4">
-	  <h1>Sign In</h1>
-			<%= form_for(:session, url: sessions_path) do |f| %>
+<div class="container signin">
+	<div class="row">
+		<div class="col-md-4"></div>
+		  <div class="col-md-4">
+		  <h1>Sign In</h1>
+				<%= form_for(:session, url: sessions_path) do |f| %>
 
-			  <%= f.label :email %>
-			  <%= f.text_field :email, autofocus: true, class: 'form-control' %>
+				  <%= f.label :email %>
+				  <%= f.text_field :email, autofocus: true, class: 'form-control' %>
 
-			  <br>
-			  <%= f.label :password %>
-			  <%= f.password_field :password, class: 'form-control' %>
+				  <br>
+				  <%= f.label :password %>
+				  <%= f.password_field :password, class: 'form-control' %>
 
-			  <br>
-				<button type="submit" class="btn btn-primary">  <%= f.submit 'Sign In', class: "btn btn-primary"  %></button>
-			<% end %>
+				  <br>
+					<%= f.submit 'Sign In', class: "btn btn-default", style: "margin-top: 15px;" %>
+				<% end %>
 
-			<p>New user? <%= link_to "Sign up now!", signup_path %></p>
-	  </div>
-	<div class="col-md-4"></div>
+				<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+		  </div>
+		<div class="col-md-4"></div>
+	</div>
 </div>

@@ -16,6 +16,7 @@ class PlacesController < ApplicationController
 
 	def new
 	   @place = Place.new
+     @user = current_user
 	end
 
   def create
