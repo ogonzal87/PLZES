@@ -7,10 +7,11 @@
     <center><div class="plane" style="text-align: center">
       <%= image_tag("paper44.png", :alt => "plane") %>
     </div></center>
-    <div class="row">
-      <h1 class="home-question">What is out there..?</h1>
+      <h1 class="home-question">What's out there..?</h1>
         <%= link_to "Let's Find Out", signup_path, class: "btn btn-lg btn-success" %><br>
         Or simply <%= link_to "Sign in", signin_path, class: "btn" %>
+        <br>
+    <div class="fa fa-angle-double-down fa-5x">
     </div>
   </div>
 </div>
@@ -21,17 +22,17 @@
     <div class="carousel-inner">
         <div class="item active">
             <div class="slide1">
-              <%= image_tag("backgroundd.jpeg", :alt => "picture3") %>
+              <%= image_tag("background10.jpg", :alt => "picture3") %>
             </div>
         </div>
         <div class="item">
             <div class="slide2">
-              <%= image_tag("background.jpeg", :alt => "picture1") %>
+              <%= image_tag("background12.jpeg", :alt => "picture1") %>
             </div>
         </div>
         <div class="item">
             <div class="slide3">
-              <%= image_tag("background1.jpeg", :alt => "picture2") %>
+              <%= image_tag("background11.jpeg", :alt => "picture2") %>
             </div>
         </div>
     </div><!-- .carousel-inner -->
@@ -41,19 +42,19 @@
 <div class="container">
   <div class="row text-center">
       <div class="col-md-4 explanation">
-        <div class="fa fa-search fa-3x circles"></div>
+        <div class="fa fa-search fa-3x"></div>
         <h2>1) Search places</h2>
         <p>Plzes will search for the best places in town! Before or while you are traveling, you can build your itinerary easily.</p>
         <p><a class="btn btn-default" href="/signup" role="button">Get the Scoop »</a></p>
       </div>
       <div class="col-md-4 explanation">
-        <div class="fa fa-heart fa-3x circles"></div>
+        <div class="fa fa-heart fa-3x"></div>
         <h2>2) Save your Favorites</h2>
         <p>Once you have found the places you really love you can save them to your account. We will store them until you have checked in!</p>
         <p><a class="btn btn-default" href="/signup" role="button">How do you do it? »</a></p>
       </div>
       <div class="col-md-4 explanation">
-        <div class="fa fa-check-circle-o fa-3x circles"></div>
+        <div class="fa fa-check-circle-o fa-3x"></div>
         <h2>3) Checkin & add more!</h2>
         <p>Once you have visited each place, you can add as many as you want and get rid of the ones you visited already!</p>
         <p><a class="btn btn-default" href="/signup" role="button">Let's get started »</a></p>
@@ -62,4 +63,29 @@
 </div>
 
 
-
+<div class="bg-light-gray" >
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="section-heading">How it All Began...</h1>
+            <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+        </div>
+    </div>
+    <div class="row">
+        <center>
+          <!-- <img src="img/yo.jpg" class="img-responsive img-circle" alt="" style="height: 300px; weight: 200px;"> -->
+          <div></div>
+          <%= image_tag("scuba.jpg", :alt => "scuba", style: "height: 200px; weight: 100px; margin-top: 20px;", class: "img-circle") %>
+          <!-- <h4>Oscar Gonzalez</h4> -->
+          <div class="container how-it-all-began-p">
+            <p>Plzes is a web application that allows you to search and store any places you would like to visit while traveling.
+            While traveling through Europe for 3 months with my brother, we found ourselves spending too much time planning the itinerary for the next city.
+            I wanted to create an application that would allow me to find the most popular places in a city and save them to my itinerary.</p>
+          </div>
+        </center>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <!-- <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p> -->
+        </div>
+    </div>
+</div>

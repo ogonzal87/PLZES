@@ -1,41 +1,49 @@
 <% provide(:title, 'Results') %>
 
 <!-- This is the Search results page -->
-<br>
-<center><h1>These are the top <%= params[:category].titleize %> in <%= params[:location].titleize %>.</h1></center>
+<div class="container results-main">
+<center><h1>These are the top <strong class="rating-word"><%= params[:category].titleize %></strong>
+						in <strong class="rating-word"><%= params[:location].titleize %></strong>.</h1></center>
+<center><h2 class="steps results-header">Step # Dos</h2></center>
 
-<div class="container-fluid">
 	<div class="container" id="main">
 		<div class="row">
 			<% @places.each do |place| %>
-				<div class="col-md-6 text-left">
+				<div class="col-md-6 text-left"> <!-- This is each panel -->
+
 					<div class="panel panel-default">
 			  		<div class="panel-body">
-			  			<div>
+
+			  			<div class="col-md-4 picture-place-detail"> <!-- Picture -->
 			  				<%if place['photos'] == false || place['photos'] == nil %>
 	   							<% photo = 'CnRnAAAAVNNL5sbyVWUematFiiP9MmdFoqbhgRyAwGG11YX_XQ1lhgorP30tx_UFAHeA4fJCz9io9J4_-26n2l7I-aGPfZ9KxRuKmvHC5vkeaOS2AsV4_0Kaoq2X5zNaCCW-GpbLnrnEVsHs4AK6h863mcXRihIQEn0bGHnci5h12pkwXkfKKBoUF0pn-HeJbfKFPVGEYDODhJPvAgQ'   %>
 	  						<% else %>
 	    						<% photo = place['photos'][0]['photo_reference'] %>
 	    					<% end %>
-                <!-- Pictures -->
                  <img src= <%= "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=#{photo}&key=AIzaSyDSNCeNSD64AM7KxZ3kK1kLEQcku_UYzns" %> style="height:100px; width:100px;" />
-              </div>
+              </div> <!-- Picture -->
 
-			  			<p>
-								<span style="float: left"><%= place['name'] %></span>
-								<span style="float: left"><%= place['rating'] %></span>
+			  			<p class="col-md-4 place-detail"> <!-- Place Details -->
+								<span style="float: left"><%= place['name'] %></span><br>
+								<span style="float: left"><strong class="rating-word">Rating: <%= place['rating'] %>  /5</strong></span>
 								<span style="float: left"><%= place['formatted_address'] %></span>
+							</p> <!-- Place Details -->
 
-								<span style="float: right"><%= link_to "Add to MyPlzes", places_path(place: {
-									name: place['name'],
-									rating: place['rating'],
-									address: place['formatted_address'],
-									photo: photo
-									}), method: :post %></span>
-							</p>
+							<div class="col-md-4 paper-plane-check-in-icon"> <!-- Save Icon -->
+							<%= link_to places_path(place: {
+								name: place['name'],
+								rating: place['rating'],
+								address: place['formatted_address'],
+								photo: photo
+								}), :method => :post do%>
+									<i class="fa fa-heart fa-3x"></i>
+								<% end %>
+							</div><!-- Save Icon -->
+
 						</div>
 					</div>
-				</div>
+				</div> <!-- This is each panel -->
+
 			<% end %>
 		</div>
 	</div>

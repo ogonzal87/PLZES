@@ -18,8 +18,15 @@
 							<span style="float: left"><%#= place.rating %></span>
 							<span style="float: left"><%#= place.photo %></span>
 							<span style="float: left"><%#= place.address %></span>
-					    <span style="float: right"><%= link_to "Visited", place, method: :delete, data: { confirm: 'Are you sure you visited?' } %></span>
+					    <span style="float: right"><%= link_to "Visited", place, method: :delete %></span>
 				      </p>
+
+							<div class="col-md-4 delete-icon"> <!-- Delete Icon -->
+							<%= link_to place, method: :delete do%>
+									<i class="fa fa-times-circle-o fa-3x"></i>
+								<% end %>
+							</div><!-- Delete Icon -->
+
 					</div>
 				</div>
 			</div>
@@ -29,3 +36,4 @@
 </div>
 
 
+<!-- , data: { confirm: 'Are you sure you visited?' } -->

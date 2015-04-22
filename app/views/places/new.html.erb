@@ -3,22 +3,26 @@
 
 <!-- This is the search or "Search" page.  -->
 
-<div class="row">
-	<div class="col-md-4"></div>
-		<div class="col-md-4 search-bar">
-		<div>
-		<center><h1>Hi <%= @user.name %>!</h1></center>
-		<center><h1>Let's start with this:</h1></center>
-			<%= form_tag places_results_path, :method => 'get' do %>
-				<%= text_field_tag :location, params[:location], class: 'form-control', placeholder:"Where are you going?", :autofocus=>true %>
-				<%= text_field_tag :category, params[:category], class: 'form-control', placeholder:"What would you like to see? "%>
-				<%= submit_tag "Let's see some Plzes", class: "btn btn-primary" %>
-			<% end %>
-		</div>
-	</div>
-	<div class="col-md-4"></div>
-</div>
+<div class="search-background">
 
+<center><h1 class="gretting-name">Hi <%= @user.name %>!</h1></center>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+			<div class="col-md-4 search-bar">
+			<div>
+			<center><h1 class="steps">Step # Uno</h1></center>
+				<%= form_tag places_results_path, :method => 'get' do %>
+					<%= text_field_tag :location, params[:location], class: 'form-control', placeholder:"Where are you going?", :autofocus=>true %>
+					<%= text_field_tag :category, params[:category], class: 'form-control', placeholder:"What would you like to see? "%>
+					<center><%= submit_tag "Let's see some Plzes", class: "btn btn-lg btn-info" %></center>
+				<% end %>
+			</div>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+
+</div>
 
 
 

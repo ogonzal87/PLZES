@@ -1,9 +1,16 @@
-/*@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
-@import url(http://fonts.googleapis.com/css?family=Lobster);*/
-
 
 body {
   font-family: 'Arvo', serif;
+}
+
+.errors {
+  padding-top: 70px;
+}
+
+.steps {
+  font-size: 50px;
+  color: #5bc0de;
+  text-shadow: 0 1px 0 #46b8da;
 }
 
 /*=================================NAVBAR============================================*/
@@ -36,16 +43,10 @@ body {
   font-family: 'Lobster', cursive;
 }
 
-.search-bar {
-	padding-top: 150px;
-	vertical-align: middle;
-}
-
 /*=====================================HOME =============================================*/
 .home-greeting {
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 .overlay {
@@ -75,12 +76,116 @@ body {
 }
 
 .explanation {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .signin {
-  margin-top: 200px;
+  margin-top: 100px;
+}
+
+.signin .form-control {
+  max-width: 400px;
+}
+
+.signup {
+  max-width: 400px;
+}
+
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+
+.how-it-all-began-p {
+  margin-top: 25px;
+  margin-bottom: 90px;
+  max-width: 700px;
+}
+
+.section-heading {
+  margin-top: 60px;
+}
+
+.fa-angle-double-down {
+  margin-top: 50px;
+}
+
+
+/*==========================================Search Page ==========================================================*/
+
+.search-background {
+  background-color: #f7f7f7;
+  background: cover;
+  height: 1000px;
+}
+
+.gretting-name {
+  font-size: 70px;
+  padding-top: 100px;
+}
+
+.search-bar {
+  padding-top: 50px;
+  vertical-align: middle;
+}
+
+.form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  font-size: 20px;
+}
+
+
+/*=================================== Results Page ======================================================*/
+
+.results-main {
+  padding-top: 95px;
+  padding-bottom: 90px;
+}
+
+.panel-body {
+  background-color: #f7f7f7;
+/*  max-height: 150px;*/
+}
+
+.paper-plane-check-in-icon {
+  text-align: right;
+  color: #FE415E;
+  width: 100px;
+  padding-top: 30px;
+}
+
+.col-md-4 > a {
+  color: #FE415E;
+}
+
+.results-header {
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.picture-place-detail {
+  width: 120px;
+}
+
+.place-detail {
+  width: 300px;
+}
+
+.rating-word {
+  color: #5bc0de;
+}
+
+
+
+/*==========================================My Places Page =====================================================*/
+
+.delete-icon {
+  text-align: right;
+  color: #FE415E;
+  width: 100px;
+  padding-top: 30px;
 }
 
 
@@ -88,18 +193,12 @@ body {
 
 
 
+/*================================Edit Account Page =========================================*/
 
 
-
-
-
-
-
-
-
-
-
-
+.edit-account {
+  padding-top: 100px;
+}
 
 
 
@@ -115,8 +214,8 @@ body {
   padding: 12px 22px;
 }
 .btn-default:hover {
-  background-color: #fff;
-  color: #957bba;
+  background-color: black;
+  color: #fff;
   border-color: #fff;
 }
 .btn:active {
@@ -134,3 +233,12 @@ body {
   width: 330px;
   padding: 15px 0;
 }
+
+.btn-info {
+  box-shadow: 0 3px 0 #23812f;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  font-size: 1.5em;
+  width: 330px;
+  padding: 15px 0;
+}
+
