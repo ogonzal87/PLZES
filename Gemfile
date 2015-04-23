@@ -26,7 +26,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'rspec-rails', '3.1.0'
   gem 'pry'
-  gem 'spring'
+  gem 'spring', '1.3.4'
 end
 
 group :production, :staging do
