@@ -2,30 +2,34 @@
 <% provide(:title, 'My Places') %>
 
 <!-- This is the page where people see the places they have favorited.  -->
+<div class="container my-place" style="padding-top: 95px; padding-bottom: 90px;">
 
-<center><h1>My Plzes</h1></center>
-<center><h3>Let's go Drink!</h3></center>
+	<center><h1>My Plzes</h1></center><br>
+	<center><h2 class="steps results-header">Step # Tres</h2></center>
 
-<div class="container-fluid">
 	<div class="container" id="main">
 		<div class="row">
 		<% @my_places.each do |place| %>
 			<div class="col-md-6 text-left">
 				<div class="panel panel-default">
 		  			<div class="panel-body">
-			  			<p>
-							<span style="float: left"><%= place.name %></span>
-							<span style="float: left"><%#= place.rating %></span>
-							<span style="float: left"><%#= place.photo %></span>
-							<span style="float: left"><%#= place.address %></span>
-					    <span style="float: right"><%= link_to "Visited", place, method: :delete %></span>
-				      </p>
 
-							<div class="col-md-4 delete-icon"> <!-- Delete Icon -->
-							<%= link_to place, method: :delete do%>
-									<i class="fa fa-times-circle-o fa-3x"></i>
-								<% end %>
-							</div><!-- Delete Icon -->
+		  			<div class="col-md-4 picture-place-detail">
+							<% place.photo %>
+							<img src= <%= "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=#{place.photo}&key=AIzaSyDSNCeNSD64AM7KxZ3kK1kLEQcku_UYzns" %> style="height:100px; width:100px;" />
+						</div>
+
+		  			<p class="col-md-4 place-detail">
+							<span style="float: left"><%= place.name %></span><br>
+							<span style="float: left"><strong class="rating-word">Rating: <%= place.rating %>   /5</strong></span>
+							<span style="float: left"><%#= place.address %></span>
+			      </p>
+
+						<div class="col-md-4 delete-icon"> <!-- Delete Icon -->
+						<%= link_to place, method: :delete do%>
+								<i class="fa fa-times-circle-o fa-3x"></i>
+							<% end %>
+						</div><!-- Delete Icon -->
 
 					</div>
 				</div>
