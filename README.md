@@ -29,7 +29,7 @@ I wanted to create an application that would allow me to find the most popular p
 
 ##ERD
 <p>
-  <img src="erd.pdf" style="max-width: 100%;">
+  <img src="erd.png" style="max-width: 100%;">
 </p>
 
 
