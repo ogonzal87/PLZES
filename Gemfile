@@ -27,6 +27,7 @@ group :development, :test do
   gem 'rspec-rails', '3.1.0'
   gem 'pry'
   gem 'spring', '1.3.4'
+  gem "rails-erd"
 end
 
 group :production, :staging do
