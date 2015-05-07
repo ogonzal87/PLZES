@@ -36,6 +36,6 @@ I wanted to create an application that would allow me to find the most popular p
 * As a user, I can sign up for an account with an email address and password
 
 ##ERD
-<img src="erd.pdf">
+<img src="erd.png">
 
 
