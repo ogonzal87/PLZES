@@ -11,9 +11,9 @@ I wanted to create an application that would allow me to find the most popular p
 Plzes was developed by me in a one week sprint as a student at General Assembly - Atlanta.
 
 ##Links
-* <a href="https://plzes.herokuapp.com/">Launch Plzes</a>
-* <a href="https://trello.com/b/eql6xanI/project-2">Trello Board</a>
-* <a href="https://moqups.com/ogonzal87/berEgNaG">Wireframes</a>
+* <a href="https://plzes.herokuapp.com/" target="_blank">Launch Plzes</a>
+* <a href="https://trello.com/b/eql6xanI/project-2" target="_blank">Trello Board</a>
+* <a href="https://moqups.com/ogonzal87/berEgNaG" target="_blank">Wireframes</a>
 
 ##Technologies Used
 * Rails 4.2.0
@@ -35,3 +35,4 @@ Plzes was developed by me in a one week sprint as a student at General Assembly 
 </p>
 
 
+<a href="" target="_blanck"></a>
