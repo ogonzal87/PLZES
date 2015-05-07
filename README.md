@@ -31,7 +31,7 @@ Plzes was developed by me in a one week sprint as a student at General Assembly 
 
 ##ERD
 <p>
-  <img src="erd.pdf" style="max-width: 100%;">
+  <img src="erd.png" style="max-width: 100%;">
 </p>
 
 
