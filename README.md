@@ -27,17 +27,9 @@ I wanted to create an application that would allow me to find the most popular p
 * capybara, faker, actory_girl
 * Heroku deployment
 
-##User Stories
-* As a user, I can delete places from my Profile
-* As a user, I can check in into a place I have visited
-* As a user, I can see a list of the places saved to my Profile
-* As a user, I can select places
-* As a user, I can login and logout of my account
-* As a user, I can sign up for an account with an email address and password
-
 ##ERD
 <p>
-  <img src="erd.pdf">
+  <img src="erd.pdf" style="max-width: 100%;">
 </p>
 
 
