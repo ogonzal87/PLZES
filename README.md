@@ -1,4 +1,4 @@
-#PLzes
+#Plzes
 
 ##Overview
 
@@ -7,6 +7,8 @@ Hello there,
 Plzes is a web application that allows you to search and store any places you would like to visit while traveling.
 While traveling through Europe for 3 months with my brother, we found ourselves spending too much time planning the itinerary for the next city.
 I wanted to create an application that would allow me to find the most popular places in a city and save them to my itinerary. Check it out. Is pretty cool.
+
+Plzes was developed by me in a one week sprint as a student at General Assembly - Atlanta.
 
 ##Links
 * <a href="https://plzes.herokuapp.com/">Launch Plzes</a>
